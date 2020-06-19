@@ -1,0 +1,41 @@
+<h3>Batch table</h3>
+<table border = "1 | 0">
+    <tr>
+      <th>Batch No</th>
+      <th>Batch Type</th>
+      <th>Self / Other</th>
+      <th>Collection Dt</th>
+      <th>Pasteurising Dt</th>
+      <th>Pasturing Proc_ID</th>
+    </tr>
+{% for x in a %}
+<tr> 
+    <td>{{x.Batch_No}}  </td>
+    <td>{{x.batch_type}}  </td>
+    <td>{{x.self_other}}</td>
+    <td>{{x.collection_date}}  </td>
+    <td>{{x.pasteurizing_date}}  </td>
+    <td>{{x.Pasturing_process_id}}  </td>
+</tr>
+{% endfor %}
+</table>
+<br>
+<h3>Doner's Table</h3>
+<table border = "1 | 0">
+{% for y in b %}
+    <tr> 
+    <td>{{y.doner_id}} </td>
+    <td>{{y.f_name}}</td>
+    <td>{{y.l_name}}</td>
+    <td>. {{ y.age }} .</td>
+    <td>{{y.address}}</td>
+    <td>{{y.HBS_test_date}}</td>
+    <td>{{y.HIV_test_date}}</td>
+    <td>{{y.screening_test_date}}</td>
+    <td>{{y.VRDL_test_date}}</td>
+    <td>{{y.last_child_birth_date}}</td>
+    <td>{{y.consent_date}}</td>
+    </tr>
+{% endfor %}
+</table>
+
